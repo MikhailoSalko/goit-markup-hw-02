@@ -90,7 +90,7 @@ body {
   background-color: var(--second-section-color);
 }
 
-.hero > .title {
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -120,7 +120,8 @@ body {
 
 /* Особливості */
 
-.features .features-title {
+.features-title {
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 
