@@ -14,6 +14,8 @@
   --main-text-color: #757575;
   --secondary-text-color: #212121;
   --accent-color: #2196f3;
+  --logo-header-color: #000000;
+  --address-footer-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Розмітка сторінки index.html */
@@ -21,23 +23,29 @@
 /* значення властивостей для боді */
 
 body {
-  color: var(--main-text-color);
-
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   letter-spacing: 0.03em;
+
+  background-color: var(--main-white-color);
+  color: var(--main-text-color);
 }
 
 /* Хедер */
 
+.list {
+  list-style: none;
+}
+
 .logo.word {
-  font-family: 'Raleway' sans-serif;
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
 
-  color: #000000;
+  color: var(--logo-header-color);
 }
 
 .logo {
@@ -46,7 +54,6 @@ body {
 
 .site-nav .link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -65,7 +72,6 @@ body {
 
 .auth-nav .link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -81,7 +87,7 @@ body {
 /* Герой */
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--second-section-color);
 }
 
 .hero > .title {
@@ -91,7 +97,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 .hero > .button {
@@ -101,31 +107,33 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--main-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
 }
 
+/* .hero > .button:hover,
+.hero > .button:focus {
+  background-color: #ffffff;
+  color: var(--accent-color);
+} */
+
 /* Особливості */
 
 .features .features-title {
-  font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 
   color: var(--secondary-text-color);
 }
 
-.features .feature-list {
-  font-size: 14px;
+.features-list {
   line-height: 1.71;
 }
 
 /* Чим ми займаємось */
 
-.work > .title {
-  font-weight: 700;
+.section-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -138,66 +146,53 @@ body {
   background-color: var(--team-section-color);
 }
 
-.team > .title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  color: var(--secondary-text-color);
-}
-
-.team > .team-name {
+.team .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 
   color: var(--secondary-text-color);
 }
 
-.team > .team-position {
+.team .team-position {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 /* Футер */
+
+address {
+  font-style: normal;
+}
 
 .footer-nav {
   background-color: var(--second-section-color);
 }
 
 .footer-logo {
-  font-family: 'Raleway' sans-serif;
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
 
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 .address-list .address-link {
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
 
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 .address-list .link {
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--address-footer-color);
 }
 
-.address-list .address-link:hover,
-.address-list .address-link:focus,
 .address-list .link:hover,
 .address-list .link:focus {
   color: var(--accent-color);
@@ -206,10 +201,12 @@ body {
 /* стилі для портфоліо */
 
 .site-nav-btn .btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  cursor: pointer;
 
   color: var(--secondary-text-color);
 }
@@ -217,11 +214,10 @@ body {
 .site-nav-btn .btn:hover,
 .site-nav-btn .btn:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 .portfolio .portfolio-title {
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
